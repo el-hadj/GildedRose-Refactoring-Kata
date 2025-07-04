@@ -4,13 +4,13 @@ from utils import item_types, update_backstage_quality, update_brie_quality,upda
 
 class GildedRose(object):
 
-    def __init__(self, items):
+    def __init__(self, items: list):
         self.items = items
 
 
     def update_quality(self):
         for item in self.items:
-            item_type = item_types.get(item.name, "")
+            item_type = item_types.get(item.name.lower(), "")
             match item_type:
                 case 'brie':
                     update_brie_quality(item)

@@ -5,12 +5,12 @@ MAX_QUALITY = 50
 MIN_QUALITY = 0
 
 item_types = {
-    "Aged Brie": "brie",
-    "Backstage passes to a TAFKAL80ETC concert": "back",
-    "Sulfuras, Hand of Ragnaros": "sulf",
-    "Conjured Mana Cake": "conj"
-
+    "aged brie": "brie",
+    "backstage passes to a tafkal80etc concert": "back",
+    "sulfuras, hand of ragnaros": "sulf",
+    "conjured mana cake": "conj"
 }
+
 
 def update_brie_quality(item: Item):
     item.sell_in -= 1

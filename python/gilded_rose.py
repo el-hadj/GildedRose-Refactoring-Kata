@@ -4,6 +4,15 @@ class GildedRose(object):
 
     def __init__(self, items):
         self.items = items
+    
+    def update_aged_brie_quality(self):
+        pass
+
+    def update_sulfuras_quality(self):
+        pass
+
+    def update_backstage_quality(self):
+        pass
 
     def update_quality(self):
         for item in self.items:

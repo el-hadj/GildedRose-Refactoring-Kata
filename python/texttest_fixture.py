@@ -2,6 +2,7 @@
 from __future__ import print_function
 
 from gilded_rose import *
+from tabulate import tabulate
 
 
 def main():
@@ -23,9 +24,7 @@ def main():
         days = int(sys.argv[1]) + 1
     for day in range(days):
         print("-------- day %s --------" % day)
-        print("name, sellIn, quality")
-        for item in items:
-            print(item)
+        print(tabulate([[item.name, item.sell_in, item.quality] for item in items], headers=["name", "sellIn", "quality"]))
         print("")
         GildedRose(items).update_quality()
 
